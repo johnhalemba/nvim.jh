@@ -208,10 +208,22 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
+        -- C / C++
         -- clangd = {},
-        -- gopls = {},
-        -- pyright = {},
+        -- Rust
         -- rust_analyzer = {},
+        -- Go
+        gopls = {},
+        -- Python
+        pyright = {},
+        -- Dockerfile
+        dockerls = {},
+        -- Bash
+        bashls = {},
+        -- Terraform
+        terraformls = {},
+        -- PowerShell
+        powershell_es = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -220,7 +232,6 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
